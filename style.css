@@ -1,0 +1,311 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #000;
+    transition: background 0.3s, color 0.3s;
+    animation: backgroundAnimation 10s infinite linear;
+}
+
+/* Header Styles */
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #ff6f61, #ffbc00); /* Gradient background */
+    padding: 20px 40px;  /* Add padding to create space around the text */
+    color: white;        /* White text color */
+    text-align: center;  /* Center the header text */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for smooth typography */
+    border-radius: 0 0 15px 15px;  /* Rounded bottom corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+header h1 {
+    font-size: 2.5rem; /* Set font size for the main title */
+    margin: 0;         /* Remove default margin */
+    letter-spacing: 2px; /* Add spacing between letters for a clean look */
+    font-weight: 600;   /* Set a bold weight for emphasis */
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+header p {
+    font-size: 1.2rem; /* Set smaller font size for subheading or description */
+    margin-top: 10px;   /* Add space between the main title and description */
+    font-weight: 300;   /* Light font weight for a subtle description */
+    opacity: 0.8;       /* Slightly reduce opacity for the description */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Main Container Styles */
+.container {
+    padding-top: 30px; /* Adjusted for header */
+    text-align: center;
+}
+
+/* Color Grid Styles */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Adjusting columns based on available space */
+    gap: 10px;
+    justify-content: center; /* Centering the grid */
+    align-items: center;
+    padding: 20px;
+    max-width: 600px; /* Set a max width to prevent stretching */
+    margin: 20px auto; /* Centering the grid */
+}
+
+/* Color Cells */
+.color-cell {
+    height: 70px; /* Increased height for better visibility */
+    width: 100%; /* Auto fit within the grid */
+    background-color: #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Hover effect */
+.color-cell:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+
+/* Color Variants */
+.color-cell:nth-child(1)  { background: #FF5733; }  /* Red-Orange */
+.color-cell:nth-child(2)  { background: #33FF57; }  /* Bright Green */
+.color-cell:nth-child(3)  { background: #3357FF; }  /* Bright Blue */
+.color-cell:nth-child(4)  { background: #FF33A1; }  /* Pink */
+.color-cell:nth-child(5)  { background: #A133FF; }  /* Purple */
+.color-cell:nth-child(6)  { background: #FFD700; }  /* Gold */
+.color-cell:nth-child(7)  { background: #00CED1; }  /* Dark Cyan */
+.color-cell:nth-child(8)  { background: #DC143C; }  /* Crimson */
+.color-cell:nth-child(9)  { background: #8A2BE2; }  /* Blue Violet */
+.color-cell:nth-child(10) { background: #32CD32; }  /* Lime Green */
+.color-cell:nth-child(11) { background: #FF4500; }  /* Orange Red */
+.color-cell:nth-child(12) { background: #00FFCC; }  /* Neon Aqua */
+.color-cell:nth-child(13) { background: #7B68EE; }  /* Medium Slate Blue */
+.color-cell:nth-child(14) { background: #FF1493; }  /* Deep Pink */
+
+
+.controls {
+    display: flex;
+    justify-content: center;  /* Centering the controls */
+    align-items: center;
+    gap: 15px;  /* Add spacing between elements */
+    margin: 20px 0;
+    position: relative;
+    left: -10px; /* Move slightly to the left */
+}
+
+
+
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e55c4a;
+}
+
+.file-input {
+    margin-top: 10px;
+}
+
+/* Animation & Hover Effects */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rotate {
+    transition: transform 0.3s;
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+}
+
+/* Gradient Preview and Palette */
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.palette .color-box {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gradient-preview {
+    /* margin-top: 20px; */
+    /* height: 100px; */
+    /* border-radius: 5px; */
+    /* background: linear-gradient(to right, #f5f7fa, #c3cfe2); */
+}
+
+/* Background Animation */
+.background-animation {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    animation: gradientAnimation 5s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+    50% {
+        background: linear-gradient(135deg, #c3cfe2, #f5f7fa);
+    }
+    100% {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .header {
+    background-color: #444;
+}
+
+body.dark-mode .btn {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #555;
+}
+
+
+/* Image Styling */
+.animated-image {
+    max-width: 100%;         /* Ensure the image doesn't overflow the container */
+    height: auto;            /* Maintain the aspect ratio */
+    border-radius: 10px;     /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow to the image */
+    margin-top: 20px;        /* Add some space from the top */
+    object-fit: cover;       /* Ensures the image scales correctly within its container */
+}
+
+/* If you want to control the size in relation to the container */
+.container img {
+    width: 80%;              /* Adjust this percentage to control the image size */
+    margin: 0 auto;          /* Center the image */
+    display: block;          /* Center block-level element */
+}
+
+
+@keyframes backgroundAnimation {
+    0% { background: #1557b9; }
+    25% { background: #91a9d1; }
+    50% { background: #c57e0d; }
+    75% { background: #2dcd62; }
+    100% { background: #f5f7fa; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
